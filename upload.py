@@ -8,11 +8,11 @@ import os
 import time
 
 
-option = st.radio('', ['Choose a Sample XRay', 'Upload your own XRay'])
+option = st.radio('', ['Choose a Sample', 'Upload your own image'])
 
 st.title("Image Captioning")
 
-if option == 'Choose a Sample XRay':
+if option == 'Choose a Sample':
     tokenizer = load(open('tokenizer.pkl', 'rb'))
     max_length = 34
 
@@ -42,14 +42,15 @@ if option == 'Choose a Sample XRay':
     
 
     label = generate_desc(model, tokenizer, up, max_length)
-    st.write(label[8:-6])
+    st.success(label[8:-6])
 
 else:
     uploaded_file = st.file_uploader("Choose an Image", type=['jpg', 'png', 'jpeg'])
     if uploaded_file is not None:
         img = Image.open(uploaded_file)
-        st.image(img, caption="Uploaded Image", use_column_width=True)
         
+        st.image(img, caption="Uploaded Image", use_column_width=True)
+        img = image.Image(img)
         # img = image.pil2tensor(img, np.float32).div_(255)
         # img = image.Image(img)
         st.write("")
