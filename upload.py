@@ -4,6 +4,8 @@ from classify import generate_desc,extract_features
 from pickle import load
 from keras.models import Model, load_model
 import matplotlib.image as mpimg
+import os
+from fastai.vision import open_image
 
 
 st.title("Upload + Classification Example")
