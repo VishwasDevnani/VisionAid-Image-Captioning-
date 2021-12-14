@@ -11,13 +11,13 @@ import time
 option = st.radio('', ['Choose a Sample', 'Upload your own image'])
 
 st.title("Image Captioning")
-tokenizer = load(open('tokenizer.pkl', 'rb'))
-max_length = 34
 
-filename = 'model_19.h5'
-model = load_model(filename)
 if option == 'Choose a Sample':
-    
+    tokenizer = load(open('tokenizer.pkl', 'rb'))
+    max_length = 34
+
+    filename = 'model_19.h5'
+    model = load_model(filename)
 
     #####################################
     test_imgs = os.listdir("test_images/")
