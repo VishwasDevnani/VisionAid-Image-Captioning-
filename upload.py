@@ -5,7 +5,6 @@ from pickle import load
 from keras.models import Model, load_model
 import matplotlib.image as mpimg
 import os
-from fastai.vision import open_image
 
 
 st.title("Upload + Classification Example")
@@ -26,7 +25,7 @@ test_img = st.selectbox(
 
 # Display and then predict on that image
 fl_path = "test_images/"+test_img
-img = open_image(fl_path)
+# img = open_image(fl_path)
 
 display_img = mpimg.imread(fl_path)
 st.image(display_img, caption="Chosen Image", use_column_width=True)
