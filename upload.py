@@ -5,6 +5,7 @@ from pickle import load
 from keras.models import Model, load_model
 import matplotlib.image as mpimg
 import os
+import time
 
 
 st.title("Upload + Classification Example")
