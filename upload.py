@@ -56,7 +56,7 @@ else:
             time.sleep(5)
         up = extract_features(img)
 
-        label = generate_desc(model, tokenizer, up, max_length))
+        label = generate_desc(model, tokenizer, up, max_length)
         st.write(label[8:-6])
         
         # st.success(f"Image Disease: {label}, Confidence: {prob:.2f}%")
