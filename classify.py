@@ -64,9 +64,9 @@ model = load_model(filename)
 import random
 import matplotlib.pyplot as plt
 
-# model = load_model('model_19.h5')
-path = 'Flickr8k_Dataset\\Flicker8k_Dataset\\111766423_4522d36e56.jpg'
-photo = extract_features(path)
+# # model = load_model('model_19.h5')
+# path = 'Flickr8k_Dataset\\Flicker8k_Dataset\\111766423_4522d36e56.jpg'
+# photo = extract_features(path)
     
-description = generate_desc(model, tokenizer, photo, max_length)
-print(description)
+# description = generate_desc(model, tokenizer, photo, max_length)
+# print(description)
