@@ -41,7 +41,7 @@ if option == 'Choose a Sample XRay':
 
     
 
-    label = generate_desc(model, tokenizer, up, max_length))
+    label = generate_desc(model, tokenizer, up, max_length)
     st.write(label[8:-6])
 
 else:
