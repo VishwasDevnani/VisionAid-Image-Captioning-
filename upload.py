@@ -50,11 +50,12 @@ else:
         img = Image.open(uploaded_file)
         
         st.image(img, caption="Uploaded Image", use_column_width=True)
-        img = image.Image(img)
+        with open(os.path.join("tempDir",img.name),"wb") as f: 
+            f.write(img.getbuffer()) 
         # img = image.pil2tensor(img, np.float32).div_(255)
         # img = image.Image(img)
         st.write("")
-        up = extract_features(img)
+        up = extract_features("tempDir//"+img.name)
         with st.spinner("Identifying whats going on in the image"):
             time.sleep(5)
         
