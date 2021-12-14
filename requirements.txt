@@ -3,6 +3,5 @@ matplotlib
 numpy
 keras
 nltk
-os
+
 tensorflow
-fastai==1.0.61
