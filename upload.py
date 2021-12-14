@@ -34,11 +34,12 @@ if option == 'Choose a Sample XRay':
     st.image(display_img, caption="Chosen Image", use_column_width=True)
 
     st.write("")
+    up = extract_features(fl_path)
     with st.spinner("Identifying whats going on in the image"):
         time.sleep(5)
 
 
-    up = extract_features(fl_path)
+    
 
     label = generate_desc(model, tokenizer, up, max_length))
     st.write(label[8:-6])
@@ -52,9 +53,10 @@ else:
         # img = image.pil2tensor(img, np.float32).div_(255)
         # img = image.Image(img)
         st.write("")
+        up = extract_features(img)
         with st.spinner("Identifying whats going on in the image"):
             time.sleep(5)
-        up = extract_features(img)
+        
 
         label = generate_desc(model, tokenizer, up, max_length)
         st.write(label[8:-6])
