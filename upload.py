@@ -51,7 +51,7 @@ else:
         
         st.image(img, caption="Uploaded Image", use_column_width=True)
         with open(os.path.join("tempDir",uploaded_file.name),"wb") as f: 
-            f.write(img.getbuffer()) 
+            f.write(uploaded_file.getbuffer()) 
         # img = image.pil2tensor(img, np.float32).div_(255)
         # img = image.Image(img)
         st.write("")
