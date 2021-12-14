@@ -12,7 +12,7 @@ from keras.applications.vgg16 import VGG16, preprocess_input
 from keras.preprocessing.image import load_img, img_to_array
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from keras.utils import to_categorical
+
 from keras.layers.merge import add
 from keras.models import Model, load_model
 from keras.layers import Input, Dense, LSTM, Embedding, Dropout
