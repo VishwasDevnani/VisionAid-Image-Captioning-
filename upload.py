@@ -45,6 +45,11 @@ if option == 'Choose a Sample':
     st.success(label[8:-6])
 
 else:
+    tokenizer = load(open('tokenizer.pkl', 'rb'))
+    max_length = 34
+
+    filename = 'model_19.h5'
+    model = load_model(filename)
     uploaded_file = st.file_uploader("Choose an Image", type=['jpg', 'png', 'jpeg'])
     if uploaded_file is not None:
         img = Image.open(uploaded_file)
